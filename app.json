@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "expo-template-initial-config",
+    "slug": "expo-template-initial-config",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
