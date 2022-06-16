@@ -4,6 +4,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 import { useTheme } from "styled-components";
 
 import { Container } from "./styles";
+import { useNavigation } from "@react-navigation/native";
 
 interface BackButtonProps extends BorderlessButtonProps {
   color?: string;
@@ -11,9 +12,14 @@ interface BackButtonProps extends BorderlessButtonProps {
 
 export function BackButton({ color, ...rest }: BackButtonProps) {
   const theme = useTheme();
+  const navigation = useNavigation();
+
+  function handleGoBack() {
+    navigation.goBack();
+  }
 
   return (
-    <Container {...rest}>
+    <Container {...rest} onPress={handleGoBack}>
       <MaterialIcons
         name="chevron-left"
         size={24}
