@@ -15,7 +15,9 @@ import {
 } from "@expo-google-fonts/archivo";
 
 import * as SplashScreen from "expo-splash-screen";
-import { Home } from "./src/screens/Home";
+
+import { StatusBar } from "react-native";
+import { Routes } from "./src/@types/routes";
 
 export default function App() {
   SplashScreen.preventAutoHideAsync();
@@ -32,7 +34,9 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Home />
+      <StatusBar barStyle="default" backgroundColor="transparent" />
+
+      <Routes />
     </ThemeProvider>
   );
 }
