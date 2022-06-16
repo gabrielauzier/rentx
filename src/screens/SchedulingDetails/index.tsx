@@ -1,9 +1,12 @@
 import React from "react";
 import { Feather } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 import { StatusBar } from "react-native";
 import { BackButton } from "../../components/BackButton";
 import { ImageSlider } from "../../components/ImageSlider";
+import { Accessory } from "../../components/Accessory";
+import { Button } from "../../components/Button";
 
 import SpeedSvg from "../../assets/speed.svg";
 import AccelerationSvg from "../../assets/acceleration.svg";
@@ -40,12 +43,15 @@ import {
 } from "./styles";
 import { useTheme } from "styled-components";
 
-import { Accessory } from "../../components/Accessory";
-import { Button } from "../../components/Button";
 import { RFValue } from "react-native-responsive-fontsize";
 
 export function SchedulingDetails() {
+  const navigation = useNavigation();
   const theme = useTheme();
+
+  function handleConfirmRental() {
+    navigation.navigate("SchedulingCompleted");
+  }
 
   return (
     <Container>
@@ -119,7 +125,11 @@ export function SchedulingDetails() {
       </Content>
 
       <Footer>
-        <Button title="Confimar" />
+        <Button
+          title="Alugar agora"
+          onPress={handleConfirmRental}
+          color={theme.colors.success}
+        />
       </Footer>
     </Container>
   );
