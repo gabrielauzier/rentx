@@ -44,7 +44,7 @@ import { Accessory } from "../../components/Accessory";
 import { Button } from "../../components/Button";
 import { RFValue } from "react-native-responsive-fontsize";
 
-export default function SchedulingDetails() {
+export function SchedulingDetails() {
   const theme = useTheme();
 
   return (
