@@ -17,7 +17,7 @@ import {
 import * as SplashScreen from "expo-splash-screen";
 
 import { StatusBar } from "react-native";
-import { Routes } from "./src/@types/routes";
+import { Routes } from "./src/routes";
 
 export default function App() {
   SplashScreen.preventAutoHideAsync();
