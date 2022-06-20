@@ -1,4 +1,4 @@
-import { useNavigation } from "@react-navigation/native";
+import { CommonActions, useNavigation } from "@react-navigation/native";
 import React, { useEffect } from "react";
 import { StatusBar } from "react-native";
 import Animated, {
@@ -52,7 +52,10 @@ export function Splash() {
   });
 
   function startApp() {
-    navigation.navigate("Home");
+    // navigation.navigate("Home");
+    navigation.dispatch(
+      CommonActions.reset({ index: 1, routes: [{ name: "Home" }] })
+    );
   }
 
   useEffect(() => {
