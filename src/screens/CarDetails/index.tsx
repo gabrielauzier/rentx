@@ -42,7 +42,7 @@ export function CarDetails() {
 
   return (
     <Container>
-      <StatusBar barStyle="dark-content" backgroundColor="transparent" />
+      <StatusBar backgroundColor="transparent" hidden />
       <Header>
         <BackButton onPress={() => {}} />
       </Header>

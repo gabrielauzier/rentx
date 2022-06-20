@@ -22,7 +22,7 @@ export const Header = styled.View`
 `;
 
 export const CarImages = styled.View`
-  margin-top: 32px;
+  margin-top: 48px;
 `;
 
 export const Content = styled.ScrollView.attrs({
